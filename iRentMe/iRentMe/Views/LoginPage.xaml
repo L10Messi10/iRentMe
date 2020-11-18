@@ -7,6 +7,13 @@
              x:Class="iRentMe.Views.LoginPage"
              Shell.NavBarIsVisible="False">
     <StackLayout>
+        <Frame HeightRequest="800" BackgroundColor="{StaticResource Primary}" Margin="-90,-300,-120,0"
+               CornerRadius="199">
+            <StackLayout BackgroundColor="Gray" HeightRequest="500" WidthRequest="100" HorizontalOptions="FillAndExpand" VerticalOptions="End"
+                         Margin="90,0,120,10">
 
+            </StackLayout>
+
+        </Frame>
     </StackLayout>
 </ContentPage>
