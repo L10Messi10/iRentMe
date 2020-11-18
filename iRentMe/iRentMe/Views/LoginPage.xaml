@@ -8,10 +8,21 @@
              Shell.NavBarIsVisible="False">
     <StackLayout>
         <Frame HeightRequest="800" BackgroundColor="{StaticResource Primary}" Margin="-90,-300,-120,0"
-               CornerRadius="199">
-            <StackLayout BackgroundColor="Gray" HeightRequest="500" WidthRequest="100" HorizontalOptions="FillAndExpand" VerticalOptions="End"
+               CornerRadius="220">
+            <StackLayout BackgroundColor="Gray"  HeightRequest="450" WidthRequest="100" HorizontalOptions="FillAndExpand" VerticalOptions="End"
                          Margin="90,0,120,10">
-
+                <!--Log-in-->
+                <StackLayout Margin="20,100">
+                    <Label Text="Login" FontSize="25" TextColor="{StaticResource TextColorWhite}"/>
+                    <BoxView HeightRequest="2" WidthRequest="40" BackgroundColor="{StaticResource TextColorWhite}" HorizontalOptions="StartAndExpand"
+                             Margin="0,15"/>
+                    <StackLayout HeightRequest="200" Margin="0,20">
+                        <Label Text="Email" FontFamily="Calibri Light"  TextColor="{StaticResource TextColorWhite}"/>
+                        <Entry TextColor="{StaticResource TextColorWhite}"/>
+                        <Label Text="Password" TextColor="{StaticResource TextColorWhite}"/>
+                        <Entry TextColor="{StaticResource TextColorWhite}"/>
+                    </StackLayout>
+                </StackLayout>
             </StackLayout>
 
         </Frame>
