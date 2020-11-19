@@ -10,7 +10,7 @@
         <Image Source="layout.png" Aspect="AspectFill" HeightRequest="850"/>
         <StackLayout HeightRequest="450" 
                      HorizontalOptions="Fill" VerticalOptions="Start"
-                     Margin="0,-750,20,0">
+                     Margin="0,-680,20,0">
             <!--Log-in-->
             <StackLayout Margin="20,50,0,0" IsVisible="True">
                 <Label Text="Login" FontSize="25" FontFamily="FontLight" TextColor="{StaticResource TextColorWhite}"/>
@@ -25,6 +25,7 @@
                                 BackgroundColor="{StaticResource ButtonColor}" CornerRadius="15"/>
                 </StackLayout>
             </StackLayout>
+           
             <!--Signup-->
             <!--<StackLayout BackgroundColor="Gray" Margin="20,100" HeightRequest="450" IsVisible="True">
                     <ScrollView>
@@ -46,6 +47,8 @@
                     </ScrollView>
                 </StackLayout>-->
         </StackLayout>
-        
+        <StackLayout HeightRequest="100" BackgroundColor="Gray" VerticalOptions="End">
+
+        </StackLayout>
     </StackLayout>
 </ContentPage>
