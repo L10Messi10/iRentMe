@@ -6,44 +6,46 @@
              mc:Ignorable="d"
              x:Class="iRentMe.Views.LoginPage"
              Shell.NavBarIsVisible="False">
-    <StackLayout>
-        <Frame HeightRequest="800" BackgroundColor="{StaticResource Primary}" Margin="-90,-350,-200,0"
-               CornerRadius="220">
-            <StackLayout  HeightRequest="450" WidthRequest="100" HorizontalOptions="FillAndExpand" VerticalOptions="End"
-                         Margin="90,0,190,50">
-                <!--Log-in-->
-                <StackLayout Margin="20,100" IsVisible="False">
-                    <Label Text="Login" FontSize="25" FontFamily="FontLight" TextColor="{StaticResource TextColorWhite}"/>
-                    <BoxView HeightRequest="2" WidthRequest="40" BackgroundColor="{StaticResource TextColorWhite}" HorizontalOptions="StartAndExpand"
+    <StackLayout Padding="0">
+        <Image Source="layout.png" Aspect="AspectFill" HeightRequest="850"/>
+        <StackLayout HeightRequest="450" 
+                     HorizontalOptions="Fill" VerticalOptions="Start"
+                     Margin="0,-750,20,0">
+            <!--Log-in-->
+            <StackLayout Margin="20,50,0,0" IsVisible="True">
+                <Label Text="Login" FontSize="25" FontFamily="FontLight" TextColor="{StaticResource TextColorWhite}"/>
+                <BoxView HeightRequest="2" WidthRequest="40" BackgroundColor="{StaticResource TextColorWhite}" HorizontalOptions="StartAndExpand"
                              Margin="0,15"/>
-                    <StackLayout HeightRequest="200" Margin="0,20">
-                        <Label Text="Email" FontFamily="FontLight"  TextColor="{StaticResource TextColorWhite}"/>
-                        <Entry TextColor="{StaticResource TextColorWhite}" FontFamily="FontLight" Keyboard="Email"/>
-                        <Label Text="Password" TextColor="{StaticResource TextColorWhite}" FontFamily="FontLight"/>
-                        <Entry TextColor="{StaticResource TextColorWhite}" FontFamily="FontLight" IsPassword="True"/>
-                        <Button HeightRequest="50" HorizontalOptions="End" WidthRequest="150" Text="Submit" VerticalOptions="Center"
+                <StackLayout HeightRequest="200">
+                    <Label Text="Email" FontFamily="FontLight"  TextColor="{StaticResource TextColorWhite}"/>
+                    <Entry TextColor="{StaticResource TextColorWhite}" FontFamily="FontLight" Keyboard="Email"/>
+                    <Label Text="Password" TextColor="{StaticResource TextColorWhite}" FontFamily="FontLight"/>
+                    <Entry TextColor="{StaticResource TextColorWhite}" FontFamily="FontLight" IsPassword="True"/>
+                    <Button HeightRequest="50" HorizontalOptions="End" WidthRequest="150" Text="Submit" VerticalOptions="Center"
                                 BackgroundColor="{StaticResource ButtonColor}" CornerRadius="15"/>
-                    </StackLayout>
                 </StackLayout>
-                <!--Signup-->
-                <StackLayout BackgroundColor="Gray" Margin="20,100" HeightRequest="450" IsVisible="True">
+            </StackLayout>
+            <!--Signup-->
+            <!--<StackLayout BackgroundColor="Gray" Margin="20,100" HeightRequest="450" IsVisible="True">
                     <ScrollView>
-                        <StackLayout>
+                        <StackLayout Visual="Material">
                             <Label Text="Sign up" FontSize="25" FontFamily="FontLight" TextColor="{StaticResource TextColorWhite}"/>
                             <BoxView HeightRequest="2" WidthRequest="40" BackgroundColor="{StaticResource TextColorWhite}" HorizontalOptions="StartAndExpand"
                                      Margin="0,15"/>
-                            <StackLayout HeightRequest="200" Margin="0,20">
-                                <Label Text="Email" FontFamily="FontLight"  TextColor="{StaticResource TextColorWhite}"/>
-                                <Entry TextColor="{StaticResource TextColorWhite}" FontFamily="FontLight" Keyboard="Email"/>
-                                <Label Text="Password" TextColor="{StaticResource TextColorWhite}" FontFamily="FontLight"/>
-                                <Entry TextColor="{StaticResource TextColorWhite}" FontFamily="FontLight" IsPassword="True"/>
-                                <Button HeightRequest="50" HorizontalOptions="End" WidthRequest="150" Text="Submit" VerticalOptions="Center"
-                                        BackgroundColor="{StaticResource ButtonColor}" CornerRadius="15"/>
+                            <StackLayout Margin="0,20">
+                                <Entry TextColor="{StaticResource TextColorWhite}" FontFamily="FontLight" Keyboard="Email"
+                                       Placeholder="Full name" PlaceholderColor="DarkGray"/>
+                                <Entry TextColor="{StaticResource TextColorWhite}" FontFamily="FontLight" IsPassword="True"
+                                       Placeholder="Address" PlaceholderColor="DarkGray"/>
+                                <Entry TextColor="{StaticResource TextColorWhite}" FontFamily="FontLight" IsPassword="True"
+                                       Placeholder="Address" PlaceholderColor="DarkGray"/>
                             </StackLayout>
+                            <Button HeightRequest="50" HorizontalOptions="End" WidthRequest="150" Text="Submit" VerticalOptions="Center"
+                                    BackgroundColor="{StaticResource ButtonColor}" CornerRadius="15"/>
                         </StackLayout>
                     </ScrollView>
-                </StackLayout>
-            </StackLayout>
-        </Frame>
+                </StackLayout>-->
+        </StackLayout>
+        
     </StackLayout>
 </ContentPage>
