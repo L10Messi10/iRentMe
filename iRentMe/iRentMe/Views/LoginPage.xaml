@@ -50,7 +50,11 @@
         <StackLayout HeightRequest="100"  VerticalOptions="End">
             <StackLayout HorizontalOptions="Center" Margin="40" Orientation="Horizontal">
                 <Label Text="Don't have an account?" VerticalOptions="Center"/>
-                <Label Text="Sign Up" BackgroundColor="Transparent" TextColor="Black"/>
+                <Label Text="Sign Up" BackgroundColor="Transparent" TextColor="Black" x:Name="signupbtn">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding OnSignUp}"/>
+                    </Label.GestureRecognizers>
+                </Label>
             </StackLayout>
         </StackLayout>
     </StackLayout>
