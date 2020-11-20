@@ -47,8 +47,11 @@
                     </ScrollView>
                 </StackLayout>-->
         </StackLayout>
-        <StackLayout HeightRequest="100" BackgroundColor="Gray" VerticalOptions="End">
-
+        <StackLayout HeightRequest="100"  VerticalOptions="End">
+            <StackLayout HorizontalOptions="Center" Margin="40" Orientation="Horizontal">
+                <Label Text="Don't have an account?" VerticalOptions="Center"/>
+                <Label Text="Sign Up" BackgroundColor="Transparent" TextColor="Black"/>
+            </StackLayout>
         </StackLayout>
     </StackLayout>
 </ContentPage>
