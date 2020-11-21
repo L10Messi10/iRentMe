@@ -17,8 +17,9 @@ namespace iRentMe.Views
         {
             InitializeComponent();
             this.BindingContext = new LoginViewModel();
+            BindingContext = this;
         }
-        public ICommand ForgotPasswordCommand => new Command(OnSignUp);
+        public ICommand OnSignUpCommand => new Command(OnSignUp);
 
         private async void OnSignUp()
         {
