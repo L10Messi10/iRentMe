@@ -5,36 +5,40 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" BackgroundImageSource="bg"
              x:Class="iRentMe.Views.LoginPage"
+             xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              Shell.NavBarIsVisible="False" Visual="Material">
     <ScrollView Padding="0">
         <StackLayout>
-            <Frame CornerRadius="20" HasShadow="True" Opacity="0.9"
+            <Frame CornerRadius="20" HasShadow="True" Opacity="0.8"
                    HorizontalOptions="Fill" VerticalOptions="CenterAndExpand"
-                   Margin="10" BackgroundColor="{StaticResource Primary}">
+                   Margin="10" BackgroundColor="White">
             <!--Log-in-->
-            <StackLayout Margin="5,50,5,0" IsVisible="True" VerticalOptions="CenterAndExpand">
-                <Label Text="Welcome Back" FontSize="30" FontFamily="BoldFont" TextColor="{StaticResource TextColorWhite}"/>
+            <StackLayout Margin="5,10,5,0" IsVisible="True" VerticalOptions="CenterAndExpand">
+                <ff:CachedImage Source="logo.png" WidthRequest="150" HeightRequest="100"
+                                DownsampleToViewSize="True" VerticalOptions="Start" />
+                <Label Text="Welcome Back" FontSize="30" FontFamily="BoldFont" TextColor="{StaticResource Primary}"/>
                 <Label Text="Login to continue" FontSize="15" FontFamily="FontLight" TextColor="{StaticResource Secondary}"/>
-                <BoxView HeightRequest="2" WidthRequest="40" BackgroundColor="{StaticResource TextColorWhite}" HorizontalOptions="StartAndExpand"
+                <BoxView HeightRequest="2" WidthRequest="40" BackgroundColor="{StaticResource Primary}" HorizontalOptions="StartAndExpand"
                              Margin="0,15"/>
                 <StackLayout>
-                    <Entry TextColor="{StaticResource TextColorWhite}" FontFamily="FontLight" Keyboard="Email"
-                           Placeholder="Email" PlaceholderColor="{StaticResource TextColorWhite}"/>
-                    <Entry TextColor="{StaticResource TextColorWhite}" FontFamily="FontLight" IsPassword="True"
-                           Placeholder="Password" PlaceholderColor="{StaticResource TextColorWhite}"/>
+                    <Entry TextColor="{StaticResource Primary}" FontFamily="FontLight" Keyboard="Email"
+                           Placeholder="Email" PlaceholderColor="{StaticResource Primary}"/>
+                    <Entry TextColor="{StaticResource Primary}" FontFamily="FontLight" IsPassword="True"
+                           Placeholder="Password" PlaceholderColor="{StaticResource Primary}"/>
                     <StackLayout Orientation="Horizontal" Spacing="0">
-                        <CheckBox x:Name="checkremember" Color="{StaticResource TextColorDark}"/>
-                        <Label Text="Remember my e-mail" VerticalOptions="Center" TextColor="{StaticResource TextColorDark}"/>
+                        <CheckBox x:Name="checkremember" Color="{StaticResource Primary}" />
+                        <Label Text="Remember my e-mail" VerticalOptions="Center" TextColor="{StaticResource Secondary}"/>
                     </StackLayout>
                     <Button HeightRequest="50" Margin="0,10,0,0" HorizontalOptions="End" WidthRequest="150" Text="Proceed" VerticalOptions="Center"
-                                BackgroundColor="{StaticResource ButtonColor}" CornerRadius="10"/>
+                                BackgroundColor="{StaticResource Primary}" CornerRadius="10"/>
                 </StackLayout>
             </StackLayout>
         </Frame>
         <StackLayout HeightRequest="100"  VerticalOptions="End">
             <StackLayout HorizontalOptions="Center" Margin="40" Orientation="Horizontal">
-                <Label Text="Don't have an account?" VerticalOptions="Center"/>
-                <Label Text="Sign Up" BackgroundColor="Transparent" TextColor="Black" x:Name="signupbtn">
+                <Label Text="Don't have an account?" VerticalOptions="Center" TextColor="{StaticResource TextColorDark}"/>
+                <Label Text="Sign Up" TextColor="{StaticResource TextColorWhite}" 
+                       x:Name="signupbtn" FontSize="15" FontAttributes="Bold">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding OnSignUpCommand}"/>
                     </Label.GestureRecognizers>
