@@ -26,6 +26,8 @@
                                Placeholder="Email" PlaceholderColor="{StaticResource Primary}"/>
                         <Entry TextColor="{StaticResource Primary}" FontFamily="FontLight" IsPassword="True"
                                Placeholder="Password" PlaceholderColor="{StaticResource Primary}"/>
+                        <Entry TextColor="{StaticResource Primary}" FontFamily="FontLight" IsPassword="True"
+                               Placeholder="Confirm password" PlaceholderColor="{StaticResource Primary}"/>
                         <Button HeightRequest="50" Margin="0,10,0,0" HorizontalOptions="End" WidthRequest="150" Text="Register" VerticalOptions="Center"
                                 BackgroundColor="{StaticResource Primary}" CornerRadius="10"/>
                     </StackLayout>
@@ -35,7 +37,7 @@
                 <StackLayout HorizontalOptions="Center" Margin="40" Orientation="Horizontal">
                     <Label Text="Already have an account?" VerticalOptions="Center" TextColor="{StaticResource TextColorDark}"/>
                     <Label Text="Sign In" TextColor="{StaticResource TextColorWhite}" 
-                           x:Name="signupbtn" FontSize="15" FontAttributes="Bold">
+                           x:Name="Signinbtn" FontSize="15" FontAttributes="Bold">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding OnSignInCommand}"/>
                         </Label.GestureRecognizers>
