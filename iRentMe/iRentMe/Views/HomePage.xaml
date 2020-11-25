@@ -3,9 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              x:Class="iRentMe.Views.HomePage" Title="Home">
-    <ScrollView>
-        <StackLayout>
-
+    <StackLayout>
+        <!--Searchbox area-->
+        <StackLayout HeightRequest="50">
+            <SearchBar Placeholder="Search"/>
         </StackLayout>
-    </ScrollView>
+        <Label Text="Categories" FontAttributes="Bold" FontSize="Large" TextColor="{StaticResource Primary}"/>
+        <CollectionView Header="Categories">
+
+        </CollectionView>
+        <ScrollView>
+            <StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
 </ContentPage>
