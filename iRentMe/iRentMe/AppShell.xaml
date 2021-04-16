@@ -2,6 +2,8 @@
 <Shell xmlns="http://xamarin.com/schemas/2014/forms" 
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:local="clr-namespace:iRentMe.Views"
+       xmlns:forms="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+       xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
        Title="iRentMe"
        x:Class="iRentMe.AppShell">
 
@@ -19,7 +21,7 @@
                 <Setter Property="Shell.TitleColor" Value="White" />
                 <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
                 <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
-                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource Secondary}" />
                 <Setter Property="Shell.TabBarForegroundColor" Value="White"/>
                 <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF"/>
                 <Setter Property="Shell.TabBarTitleColor" Value="White"/>
@@ -47,7 +49,7 @@
                             </VisualState>
                             <VisualState x:Name="Selected">
                                 <VisualState.Setters>
-                                    <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
+                                    <Setter Property="BackgroundColor" Value="{StaticResource Secondary}" />
                                 </VisualState.Setters>
                             </VisualState>
                         </VisualStateGroup>
@@ -56,6 +58,34 @@
             </Style>
         </ResourceDictionary>
     </Shell.Resources>
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <pancakeView:PancakeView
+                HorizontalOptions="FillAndExpand"
+                IsClippedToBounds="true"
+                VerticalOptions="FillAndExpand">
+                <AbsoluteLayout>
+                    <!--<forms:CachedImage Source="bg" AbsoluteLayout.LayoutBounds="0,0,1,1"
+                                    AbsoluteLayout.LayoutFlags="All"
+                                    HeightRequest="150" Aspect="AspectFill" />-->
+                    <StackLayout Margin="0,0,0,0" Padding="25" AbsoluteLayout.LayoutBounds="0,0,1,1"
+                                 AbsoluteLayout.LayoutFlags="All" Spacing="0"
+                                 BackgroundColor="{StaticResource Primary}">
+                        <Label
+                            Margin="0,0,0,0"
+                            FontSize="19" FontAttributes="Bold"
+                            HorizontalOptions="CenterAndExpand"
+                            Text="iRent"
+                            TextColor="White"
+                            HorizontalTextAlignment="Center"
+                            VerticalOptions="StartAndExpand" />
+                        <forms:CachedImage Source="water_100" Margin="0,10,0,10" HeightRequest="50" HorizontalOptions="CenterAndExpand"/>
+                    </StackLayout>
+                </AbsoluteLayout>
+            </pancakeView:PancakeView>
+
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
 
     <!-- 
         When the Flyout is visible this defines the content to display in the flyout.
