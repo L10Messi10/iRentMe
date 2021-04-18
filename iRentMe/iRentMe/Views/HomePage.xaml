@@ -4,19 +4,36 @@
              xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              x:Class="iRentMe.Views.HomePage" Title="Home">
-    <Grid Margin="0,5,0,0">
+    <Grid Margin="5,2,5,0">
         <!--Searchbox area-->
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
             <RowDefinition Height="100"/>
+            <RowDefinition Height="200"/>
         </Grid.RowDefinitions>
-        <Frame Grid.Row="0" CornerRadius="20" BorderColor="{StaticResource Shadow}" Padding="0" HasShadow="False">
-            <SearchBar Placeholder="Search items here." FontSize="Small" BackgroundColor="{StaticResource Shadow}"/>
+        <Frame Grid.Row="0" CornerRadius="10" BackgroundColor="{StaticResource Shadow}" Padding="0" HasShadow="False">
+            <SearchBar Margin="0,0,0,-1" Placeholder="Search services here." FontSize="Small"
+                                            BackgroundColor="Transparent"/>
         </Frame>
-        <Frame Grid.Row="1" Padding="0" Margin="5" CornerRadius="10">
+        <Frame Grid.Row="1" Padding="0" CornerRadius="10">
             <StackLayout Margin="5">
-                <Label Text="All Categories" FontSize="Small" TextColor="{StaticResource Primary}" />
-                <CollectionView Header="Categories" HeightRequest="60">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Label Text="Categories" FontSize="Small" HorizontalOptions="StartAndExpand" TextColor="{StaticResource ButtonColor}"/>
+                    <Label Text="View All" FontSize="Small" HorizontalOptions="EndAndExpand" TextColor="{StaticResource TextColorDark}"/>
+                </StackLayout>
+                <CollectionView Header="Categories" ItemsLayout="HorizontalList">
+
+                </CollectionView>
+            </StackLayout>
+        </Frame>
+        <Frame Grid.Row="2" Padding="0" HasShadow="True" CornerRadius="10">
+            <StackLayout Margin="5">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Label Text="Catalogs" FontSize="Small" HorizontalOptions="StartAndExpand" TextColor="{StaticResource ButtonColor}"/>
+                    <Label Text="View All" FontSize="Small" HorizontalOptions="EndAndExpand" TextColor="{StaticResource TextColorDark}"/>
+                </StackLayout>
+                <CollectionView Header="Categories" VerticalOptions="FillAndExpand"
+                                ItemsLayout="HorizontalList">
 
                 </CollectionView>
             </StackLayout>

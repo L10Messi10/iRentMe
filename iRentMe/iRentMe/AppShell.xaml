@@ -60,29 +60,33 @@
     </Shell.Resources>
     <Shell.FlyoutHeaderTemplate>
         <DataTemplate>
-            <pancakeView:PancakeView
+            <Frame
                 HorizontalOptions="FillAndExpand"
-                IsClippedToBounds="true"
+                IsClippedToBounds="true" Padding="0"
                 VerticalOptions="FillAndExpand">
-                <AbsoluteLayout>
+                <StackLayout>
                     <!--<forms:CachedImage Source="bg" AbsoluteLayout.LayoutBounds="0,0,1,1"
                                     AbsoluteLayout.LayoutFlags="All"
                                     HeightRequest="150" Aspect="AspectFill" />-->
-                    <StackLayout Margin="0,0,0,0" Padding="25" AbsoluteLayout.LayoutBounds="0,0,1,1"
-                                 AbsoluteLayout.LayoutFlags="All" Spacing="0"
-                                 BackgroundColor="{StaticResource Primary}">
+                    <StackLayout Margin="10">
                         <Label
-                            Margin="0,0,0,0"
-                            FontSize="19" FontAttributes="Bold"
-                            HorizontalOptions="CenterAndExpand"
-                            Text="iRent"
-                            TextColor="White"
+                            HorizontalOptions="StartAndExpand"
+                            TextColor="{StaticResource ButtonColor}"
                             HorizontalTextAlignment="Center"
-                            VerticalOptions="StartAndExpand" />
-                        <forms:CachedImage Source="water_100" Margin="0,10,0,10" HeightRequest="50" HorizontalOptions="CenterAndExpand"/>
+                            VerticalOptions="StartAndExpand">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="i" FontSize="30" TextColor="{StaticResource ButtonColor}"/>
+                                    <Span Text="Rent" FontSize="30" TextColor="{StaticResource Primary}"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
                     </StackLayout>
-                </AbsoluteLayout>
-            </pancakeView:PancakeView>
+                    <BoxView HeightRequest="1" 
+                             BackgroundColor="{StaticResource TextColorDark}"/>
+                </StackLayout>
+                
+            </Frame>
 
         </DataTemplate>
     </Shell.FlyoutHeaderTemplate>
@@ -92,14 +96,11 @@
         FlyoutDisplayOptions="AsMultipleItems" will create a separate flyout item for each child element    
         https://docs.microsoft.com/dotnet/api/xamarin.forms.shellgroupitem.flyoutdisplayoptions?view=xamarin-forms
     -->
-    <FlyoutItem Title="Home" Icon="icon_about.png">
+    <FlyoutItem Title="Home" Icon="home.png">
         <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:HomePage}" />
     </FlyoutItem>
-    <FlyoutItem Title="About" Icon="icon_about.png">
+    <FlyoutItem Title="About" Icon="about.png">
         <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
-    </FlyoutItem>
-    <FlyoutItem Title="Browse" Icon="icon_feed.png">
-        <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate local:ItemsPage}" />
     </FlyoutItem>
 
     <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
