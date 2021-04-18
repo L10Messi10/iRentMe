@@ -68,20 +68,21 @@
                     <!--<forms:CachedImage Source="bg" AbsoluteLayout.LayoutBounds="0,0,1,1"
                                     AbsoluteLayout.LayoutFlags="All"
                                     HeightRequest="150" Aspect="AspectFill" />-->
-                    <StackLayout Margin="10">
+                    <Grid Margin="10">
                         <Label
                             HorizontalOptions="StartAndExpand"
                             TextColor="{StaticResource ButtonColor}"
-                            HorizontalTextAlignment="Center"
-                            VerticalOptions="StartAndExpand">
+                            VerticalOptions="Center">
                             <Label.FormattedText>
                                 <FormattedString>
-                                    <Span Text="i" FontSize="30" TextColor="{StaticResource ButtonColor}"/>
-                                    <Span Text="Rent" FontSize="30" TextColor="{StaticResource Primary}"/>
+                                    <Span Text="i" FontSize="30" TextColor="{StaticResource Primary}"/>
+                                    <Span Text="Rent" FontSize="30" TextColor="{StaticResource ButtonColor}"/>
                                 </FormattedString>
                             </Label.FormattedText>
                         </Label>
-                    </StackLayout>
+                        <forms:CachedImage Source="logo" HorizontalOptions="EndAndExpand" VerticalOptions="Center"
+                                           HeightRequest="50" Aspect="AspectFill" />
+                    </Grid>
                     <BoxView HeightRequest="1" 
                              BackgroundColor="{StaticResource TextColorDark}"/>
                 </StackLayout>

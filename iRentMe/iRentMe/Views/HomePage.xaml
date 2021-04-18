@@ -4,7 +4,7 @@
              xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              x:Class="iRentMe.Views.HomePage" Title="Home">
-    <Grid Margin="5,2,5,0">
+    <Grid Margin="5,5,5,0">
         <!--Searchbox area-->
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
@@ -29,7 +29,7 @@
         <Frame Grid.Row="2" Padding="0" HasShadow="True" CornerRadius="10">
             <StackLayout Margin="5">
                 <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                    <Label Text="Catalogs" FontSize="Small" HorizontalOptions="StartAndExpand" TextColor="{StaticResource ButtonColor}"/>
+                    <Label Text="Nearby Services" FontSize="Small" HorizontalOptions="StartAndExpand" TextColor="{StaticResource ButtonColor}"/>
                     <Label Text="View All" FontSize="Small" HorizontalOptions="EndAndExpand" TextColor="{StaticResource TextColorDark}"/>
                 </StackLayout>
                 <CollectionView Header="Categories" VerticalOptions="FillAndExpand"
