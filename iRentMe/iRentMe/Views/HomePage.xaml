@@ -2,20 +2,24 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              x:Class="iRentMe.Views.HomePage" Title="Home">
-    <StackLayout>
+    <Grid Margin="0,5,0,0">
         <!--Searchbox area-->
-        <StackLayout HeightRequest="50">
-            <SearchBar Placeholder="Search"/>
-        </StackLayout>
-        <Label Text="Categories" FontAttributes="Bold" FontSize="Large" TextColor="{StaticResource Primary}"/>
-        <CollectionView Header="Categories">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+        <Frame Grid.Row="0" CornerRadius="20" BorderColor="{StaticResource Shadow}" Padding="0" HasShadow="False">
+            <SearchBar Placeholder="Search items here." FontSize="Small" BackgroundColor="{StaticResource Shadow}"/>
+        </Frame>
+        <Frame Grid.Row="1" Padding="0" Margin="5" CornerRadius="10">
+            <StackLayout Margin="5">
+                <Label Text="All Categories" FontSize="Small" TextColor="{StaticResource Primary}" />
+                <CollectionView Header="Categories" HeightRequest="60">
 
-        </CollectionView>
-        <ScrollView>
-            <StackLayout>
-
+                </CollectionView>
             </StackLayout>
-        </ScrollView>
-    </StackLayout>
+        </Frame>
+    </Grid>
 </ContentPage>
