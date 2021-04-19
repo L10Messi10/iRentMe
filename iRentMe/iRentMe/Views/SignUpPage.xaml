@@ -10,7 +10,7 @@
             <Frame VerticalOptions="CenterAndExpand" HorizontalOptions="Fill"
                    Margin="10" CornerRadius="15" Opacity="0.8">
                 <StackLayout Margin="5,10,5,0" IsVisible="True" VerticalOptions="CenterAndExpand">
-                    <forms:CachedImage Source="logo.png" WidthRequest="150" HeightRequest="100"
+                    <forms:CachedImage Source="irentlogo.png" WidthRequest="150" HeightRequest="100"
                                     DownsampleToViewSize="True" VerticalOptions="Start" />
                     <Label Text="Registration" FontSize="20" FontFamily="BoldFont" TextColor="{StaticResource Primary}"/>
                     <BoxView HeightRequest="2" WidthRequest="40" BackgroundColor="{StaticResource Primary}" HorizontalOptions="StartAndExpand"

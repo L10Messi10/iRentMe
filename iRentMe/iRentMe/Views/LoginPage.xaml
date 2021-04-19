@@ -14,7 +14,7 @@
                    Margin="10" BackgroundColor="White">
             <!--Log-in-->
             <StackLayout Margin="5,10,5,0" IsVisible="True" VerticalOptions="CenterAndExpand">
-                <ff:CachedImage Source="logo.png" WidthRequest="150" HeightRequest="100"
+                    <ff:CachedImage Source="irentlogo.png" WidthRequest="150" HeightRequest="100"
                                 DownsampleToViewSize="True" VerticalOptions="Start" />
                 <Label Text="Welcome Back" FontSize="30" FontFamily="BoldFont" TextColor="{StaticResource Primary}"/>
                 <Label Text="Login to continue" FontSize="15" FontFamily="FontLight" TextColor="{StaticResource Secondary}"/>

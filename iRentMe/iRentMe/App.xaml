@@ -7,11 +7,11 @@
     -->
     <Application.Resources>
         <ResourceDictionary>
-            <Color x:Key="Primary">#FF0031</Color>
-            <Color x:Key="Secondary">#EE5571</Color>
-            <Color x:Key="ShellBG">#F9C6CF</Color>
+            <Color x:Key="Primary">#440a67</Color>
+            <Color x:Key="Secondary">#93329e</Color>
+            <Color x:Key="ShellBG">#b4aee8</Color>
             <Color x:Key="ButtonColor">#5A6464</Color>
-            <Color x:Key="TextColorWhite">WhiteSmoke</Color>
+            <Color x:Key="TextColorWhite">#ffe3fe</Color>
             <Color x:Key="TextColorDark">Gainsboro</Color>
             <Color x:Key="Shadow">#F4F7FC</Color>
             <Style TargetType="Button">
