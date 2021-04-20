@@ -13,6 +13,7 @@
             <Color x:Key="ButtonColor">#5A6464</Color>
             <Color x:Key="TextColorWhite">#ffe3fe</Color>
             <Color x:Key="TextColorDark">Gainsboro</Color>
+            <Color x:Key="SearchBgColor">#C9C9C9</Color>
             <Color x:Key="Shadow">#F4F7FC</Color>
             <Style TargetType="Button">
                 <Setter Property="TextColor" Value="White"></Setter>

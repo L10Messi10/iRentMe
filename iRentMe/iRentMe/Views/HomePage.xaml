@@ -3,19 +3,31 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              xmlns:pancakeView="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:transformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
              x:Class="iRentMe.Views.HomePage" Title="Home">
+    <Shell.SearchHandler>
+        <SearchHandler Placeholder="Find services you need..." FontSize="Small" SearchBoxVisibility="Collapsible" ShowsResults="True"
+                       CancelButtonColor="{StaticResource Primary}" BackgroundColor="{StaticResource SearchBgColor}" ClearIconHelpText="Cancel"/>
+    </Shell.SearchHandler>
+    <!--<NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            --><!--<ff:CachedImage x:Name="profpic" HeightRequest="50" WidthRequest="50" HorizontalOptions="EndAndExpand"
+                            LoadingPlaceholder="notfound.png" ErrorPlaceholder="notfound.png" BackgroundColor="Gray">
+                <ff:CachedImage.Transformations>
+                    <transformations:CircleTransformation BorderHexColor="#FFFFFF" BorderSize="10"/>
+                </ff:CachedImage.Transformations>
+            </ff:CachedImage>--><!--
+            <Label Text="Categories" FontSize="Small" HorizontalOptions="StartAndExpand" TextColor="{StaticResource ButtonColor}"/>
+        </StackLayout>
+
+    </NavigationPage.TitleView>-->
     <Grid Margin="5,5,5,0">
         <!--Searchbox area-->
         <Grid.RowDefinitions>
-            <RowDefinition Height="40"/>
             <RowDefinition Height="100"/>
             <RowDefinition Height="200"/>
         </Grid.RowDefinitions>
-        <Frame Grid.Row="0" CornerRadius="10" BackgroundColor="{StaticResource Shadow}" Padding="0" HasShadow="False">
-            <SearchBar Margin="0,0,0,-1" Placeholder="Search services here." FontSize="Small"
-                                            BackgroundColor="Transparent"/>
-        </Frame>
-        <Frame Grid.Row="1" Padding="0" CornerRadius="10">
+        <Frame Grid.Row="0" Padding="0" CornerRadius="10">
             <StackLayout Margin="5">
                 <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                     <Label Text="Categories" FontSize="Small" HorizontalOptions="StartAndExpand" TextColor="{StaticResource ButtonColor}"/>
@@ -26,10 +38,10 @@
                 </CollectionView>
             </StackLayout>
         </Frame>
-        <Frame Grid.Row="2" Padding="0" HasShadow="True" CornerRadius="10">
+        <Frame Grid.Row="1" Padding="0" HasShadow="True" CornerRadius="10">
             <StackLayout Margin="5">
                 <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                    <Label Text="Nearby Services" FontSize="Small" HorizontalOptions="StartAndExpand" TextColor="{StaticResource ButtonColor}"/>
+                    <Label Text="Top services nearby" FontSize="Small" HorizontalOptions="StartAndExpand" TextColor="{StaticResource ButtonColor}"/>
                     <Label Text="View All" FontSize="Small" HorizontalOptions="EndAndExpand" TextColor="{StaticResource TextColorDark}"/>
                 </StackLayout>
                 <CollectionView Header="Categories" VerticalOptions="FillAndExpand"
