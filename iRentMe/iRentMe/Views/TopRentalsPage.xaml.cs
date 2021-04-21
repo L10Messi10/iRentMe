@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace iRentMe.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class HomePage : ContentPage
+    public partial class TopRentalsPage : ContentPage
     {
-        public HomePage()
+        public TopRentalsPage()
         {
             InitializeComponent();
         }

@@ -96,7 +96,7 @@
         https://docs.microsoft.com/dotnet/api/xamarin.forms.shellgroupitem.flyoutdisplayoptions?view=xamarin-forms
     -->
     <FlyoutItem Title="Home" Icon="home.png">
-        <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:HomePage}" />
+        <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:WelcomePage}" />
     </FlyoutItem>
     <FlyoutItem Title="Notifications" Icon="notification.png">
         <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:HomePage}" />

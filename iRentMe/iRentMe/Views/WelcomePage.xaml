@@ -1,12 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:forms="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              x:Class="iRentMe.Views.WelcomePage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid VerticalOptions="StartAndExpand" Padding="30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <StackLayout Grid.Column="0">
+                <Label Text="Good morning, Greg" FontAttributes="Bold" FontSize="Medium"
+                       VerticalOptions="CenterAndExpand" TextColor="{StaticResource TextBlack}"
+                       HorizontalOptions="StartAndExpand" />
+                <Label Text="There are 76 rental services in your area." FontSize="Small"
+                       VerticalOptions="CenterAndExpand" 
+                       HorizontalOptions="StartAndExpand" />
+            </StackLayout>
+            <StackLayout Grid.Row="0" Grid.Column="1">
+                <Label Text="Some illustrations here"
+                       VerticalOptions="CenterAndExpand" 
+                       HorizontalOptions="CenterAndExpand" />
+            </StackLayout>
+
+            <Frame Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,50,0,10"
+                   Padding="5" CornerRadius="5" HasShadow="False">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Spacing="0">
+                    <forms:CachedImage Source="search" HeightRequest="20" HorizontalOptions="StartAndExpand" />
+                    <Button Text="Search your desired rentals" HeightRequest="40" TextTransform="None" Padding="0" HorizontalOptions="FillAndExpand"
+                            BackgroundColor="Transparent" TextColor="{StaticResource Primary}" FontSize="Small"/>
+                </StackLayout>
+            </Frame>
+            <Frame Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="{StaticResource Primary}" CornerRadius="5">
+                
+            </Frame>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
