@@ -2,43 +2,66 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:forms="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:touch="clr-namespace:TouchEffect;assembly=TouchEffect"
              x:Class="iRentMe.Views.WelcomePage">
     <ContentPage.Content>
-        <Grid VerticalOptions="StartAndExpand" Padding="30">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <StackLayout Grid.Column="0">
-                <Label Text="Good morning, Greg" FontAttributes="Bold" FontSize="Medium"
-                       VerticalOptions="CenterAndExpand" TextColor="{StaticResource TextBlack}"
-                       HorizontalOptions="StartAndExpand" />
-                <Label Text="There are 76 rental services in your area." FontSize="Small"
-                       VerticalOptions="CenterAndExpand" 
-                       HorizontalOptions="StartAndExpand" />
-            </StackLayout>
-            <StackLayout Grid.Row="0" Grid.Column="1">
-                <Label Text="Some illustrations here"
-                       VerticalOptions="CenterAndExpand" 
-                       HorizontalOptions="CenterAndExpand" />
-            </StackLayout>
+        <ScrollView>
+            <StackLayout VerticalOptions="StartAndExpand" Orientation="Vertical" >
+                <Grid VerticalOptions="StartAndExpand" Padding="30">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <StackLayout Grid.Column="0">
+                        <Label Text="Good morning, Greg" FontAttributes="Bold" FontSize="Caption"
+                               VerticalOptions="CenterAndExpand" TextColor="{StaticResource TextBlack}"
+                               HorizontalOptions="StartAndExpand" />
+                        <Label Text="There are 76 rental services in your area." FontSize="Micro"
+                               VerticalOptions="CenterAndExpand"
+                               HorizontalOptions="StartAndExpand" />
+                    </StackLayout>
+                    <StackLayout Grid.Row="0" Grid.Column="1">
+                        <Label Text="Some illustrations here"
+                               VerticalOptions="CenterAndExpand"
+                               HorizontalOptions="CenterAndExpand" />
+                    </StackLayout>
 
-            <Frame Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,50,0,10"
-                   Padding="5" CornerRadius="5" HasShadow="False">
-                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Spacing="0">
-                    <forms:CachedImage Source="search" HeightRequest="20" HorizontalOptions="StartAndExpand" />
-                    <Button Text="Search your desired rentals" HeightRequest="40" TextTransform="None" Padding="0" HorizontalOptions="FillAndExpand"
-                            BackgroundColor="Transparent" TextColor="{StaticResource Primary}" FontSize="Small"/>
-                </StackLayout>
-            </Frame>
-            <Frame Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="{StaticResource Primary}" CornerRadius="5">
-                
-            </Frame>
-        </Grid>
+                    <Frame Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,50,0,10"
+                           Padding="5" CornerRadius="5" HasShadow="True"
+                           touch:TouchEff.PressedBackgroundColor="{StaticResource Shadow}"
+                           touch:TouchEff.PressedAnimationDuration="50"
+                           touch:TouchEff.RegularAnimationDuration="100"
+                           touch:TouchEff.PressedScale="0.9"
+                           touch:TouchEff.PressedOpacity="0.9">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Spacing="0">
+                            <forms:CachedImage Source="search" HeightRequest="20" HorizontalOptions="StartAndExpand" />
+                            <Label Text="Search your desired rentals" VerticalTextAlignment="Center" HeightRequest="40"
+                                   TextTransform="None" Padding="0" HorizontalOptions="StartAndExpand"
+                                   BackgroundColor="Transparent" TextColor="{StaticResource Primary}" FontSize="Small"
+                                   Margin="10,0,0,0" />
+
+                        </StackLayout>
+                    </Frame>
+                </Grid>
+                <Grid VerticalOptions="StartAndExpand" Margin="10,0,10,0" Padding="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Frame Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="{StaticResource Primary}"
+                           CornerRadius="5" HeightRequest="150">
+
+                    </Frame>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
