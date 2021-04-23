@@ -16,21 +16,22 @@
                         <ColumnDefinition />
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
-                    <StackLayout Grid.Column="0">
-                        <Label Text="Good morning, Greg" FontAttributes="Bold" FontSize="Caption"
-                               VerticalOptions="CenterAndExpand" TextColor="{StaticResource TextBlack}"
-                               HorizontalOptions="StartAndExpand" />
-                        <Label Text="There are 76 rental services in your area." FontSize="Micro"
-                               VerticalOptions="CenterAndExpand"
-                               HorizontalOptions="StartAndExpand" />
-                    </StackLayout>
-                    <StackLayout Grid.Row="0" Grid.Column="1">
-                        <Label Text="Some illustrations here"
-                               VerticalOptions="CenterAndExpand"
-                               HorizontalOptions="CenterAndExpand" />
-                    </StackLayout>
+                    <AbsoluteLayout Grid.ColumnSpan="2" Grid.Column="0" >
+                        <Image Aspect="AspectFit" Source="ilustration_1.png" HeightRequest="200" AbsoluteLayout.LayoutFlags="PositionProportional"
+                               AbsoluteLayout.LayoutBounds="1.40,1,200,100" VerticalOptions="Center" Margin="0,-30,0,0" HorizontalOptions="EndAndExpand" />
+                        <StackLayout HorizontalOptions="StartAndExpand" >
+                            <Label Text="Good morning, Greg" FontAttributes="Bold" FontSize="Small"
+                                   VerticalOptions="CenterAndExpand" TextColor="{StaticResource TextBlack}"
+                                   HorizontalOptions="StartAndExpand" />
+                            <Label Text="There are 76 rental services in your area." FontSize="Micro"
+                                   VerticalOptions="Start"
+                                   HorizontalOptions="StartAndExpand" />
+                        </StackLayout>
 
-                    <Frame Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,50,0,10"
+                        
+                    </AbsoluteLayout>
+
+                    <Frame Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0,0,10"
                            Padding="5" CornerRadius="5" HasShadow="True"
                            touch:TouchEff.PressedBackgroundColor="{StaticResource Shadow}"
                            touch:TouchEff.PressedAnimationDuration="50"
@@ -56,10 +57,28 @@
                         <ColumnDefinition />
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
-                    <Frame Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="{StaticResource Primary}"
-                           CornerRadius="5" HeightRequest="150">
+                    <StackLayout Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+                        <AbsoluteLayout>
+                            <Frame BackgroundColor="{StaticResource Primary}"
+                                   CornerRadius="5" AbsoluteLayout.LayoutBounds="0,0,1,1"
+                                   AbsoluteLayout.LayoutFlags="All">
+                                <StackLayout VerticalOptions="EndAndExpand" Orientation="Vertical" Margin="0">
+                                    <Label Text="Find rentals" TextColor="{StaticResource TextColorWhite}"
+                                           FontAttributes="Bold" FontSize="Caption"/>
+                                    <Label Text="Search rentals you need"
+                                           TextColor="Gray" FontSize="Micro"/>
+                                    <Button Text="Find now ->" HorizontalOptions="StartAndExpand" BackgroundColor="{StaticResource Shadow}"
+                                            TextTransform="None" HeightRequest="40" FontSize="Caption" Padding="0" TextColor="{StaticResource TextBlack}" CornerRadius="30"/>
+                                </StackLayout>
+                                
+                            </Frame>
+                            <Image Source="ilustration_2.png" Aspect="AspectFit"
+                                               VerticalOptions="Center" Margin="0,-80,0,0"
+                                               AbsoluteLayout.LayoutFlags="PositionProportional"
+                                               AbsoluteLayout.LayoutBounds="1.20,1,200,100" />
+                        </AbsoluteLayout>
+                    </StackLayout>
 
-                    </Frame>
                 </Grid>
             </StackLayout>
         </ScrollView>
