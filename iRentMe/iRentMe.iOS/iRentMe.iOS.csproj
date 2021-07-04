@@ -66,8 +66,11 @@
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <None Include="Entitlements.plist" />
+    <BundleResource Include="Find.json" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <BundleResource Include="sun.json" />
+    <BundleResource Include="night.json" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
@@ -134,6 +137,9 @@
   <ItemGroup>
     <PackageReference Include="Azure.Storage.Blobs">
       <Version>12.8.1</Version>
+    </PackageReference>
+    <PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie">
+      <Version>4.0.10</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.Azure.Mobile.Client">
       <Version>4.2.0</Version>

@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:forms="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              xmlns:touch="clr-namespace:TouchEffect;assembly=TouchEffect"
+             xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms" 
              x:Class="iRentMe.Views.WelcomePage">
     <ContentPage.Content>
         <ScrollView>
@@ -17,9 +18,19 @@
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <AbsoluteLayout Grid.ColumnSpan="2" Grid.Column="0" >
-                        <Image Aspect="AspectFit" Source="ilustration_1.png" HeightRequest="200" AbsoluteLayout.LayoutFlags="PositionProportional"
-                               AbsoluteLayout.LayoutBounds="1.40,1,200,100" VerticalOptions="Center" Margin="0,-30,0,0" HorizontalOptions="EndAndExpand" />
-                        <StackLayout HorizontalOptions="StartAndExpand" >
+                        <lottie:AnimationView RepeatMode="Infinite" Animation="sun.json" AnimationSource="AssetOrBundle"
+                                              HeightRequest="200" WidthRequest="200" VerticalOptions="FillAndExpand"
+                                              IsAnimating="True"
+                                              AutoPlay="True" AbsoluteLayout.LayoutFlags="PositionProportional"
+                                              AbsoluteLayout.LayoutBounds="1.40,1,200,100"
+                                              Margin="0,-30,0,0" HorizontalOptions="EndAndExpand"/>
+                        <!--<lottie:AnimationView RepeatMode="Infinite" Animation="night.json" AnimationSource="AssetOrBundle"
+                                              HeightRequest="200" WidthRequest="200" VerticalOptions="FillAndExpand"
+                                              IsAnimating="True"
+                                              AutoPlay="True" AbsoluteLayout.LayoutFlags="PositionProportional"
+                                              AbsoluteLayout.LayoutBounds="1.40,1,200,100"
+                                              Margin="0,-30,0,0" HorizontalOptions="EndAndExpand"/>-->
+                        <StackLayout HorizontalOptions="StartAndExpand">
                             <Label Text="Good morning, Greg" FontAttributes="Bold" FontSize="Small"
                                    VerticalOptions="CenterAndExpand" TextColor="{StaticResource TextBlack}"
                                    HorizontalOptions="StartAndExpand" />
@@ -72,10 +83,12 @@
                                 </StackLayout>
                                 
                             </Frame>
-                            <Image Source="ilustration_2.png" Aspect="AspectFit"
-                                               VerticalOptions="Center" Margin="0,-80,0,0"
-                                               AbsoluteLayout.LayoutFlags="PositionProportional"
-                                               AbsoluteLayout.LayoutBounds="1.20,1,200,100" />
+                            <lottie:AnimationView RepeatMode="Infinite" Animation="Find.json" AnimationSource="AssetOrBundle"
+                                                  HeightRequest="200" WidthRequest="200" VerticalOptions="FillAndExpand"
+                                                  IsAnimating="True"
+                                                  AutoPlay="True" AbsoluteLayout.LayoutFlags="PositionProportional"
+                                                  AbsoluteLayout.LayoutBounds="1.20,1,200,100"
+                                                  Margin="0,-80,0,0" HorizontalOptions="EndAndExpand"/>
                         </AbsoluteLayout>
                     </StackLayout>
 
