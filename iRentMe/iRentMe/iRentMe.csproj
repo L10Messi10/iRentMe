@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Azure.Storage.Blobs" Version="12.8.1" />
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.9.1" />
     <PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie" Version="4.0.10" />
     <PackageReference Include="Microsoft.Azure.Mobile.Client" Version="4.2.0" />
     <PackageReference Include="TouchView" Version="4.1.100" />

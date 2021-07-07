@@ -17,20 +17,39 @@
                         <ColumnDefinition />
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
-                    <AbsoluteLayout Grid.ColumnSpan="2" Grid.Column="0" >
-                        <lottie:AnimationView RepeatMode="Infinite" Animation="sun.json" AnimationSource="AssetOrBundle"
-                                              HeightRequest="200" WidthRequest="200" VerticalOptions="FillAndExpand"
-                                              IsAnimating="True"
-                                              AutoPlay="True" AbsoluteLayout.LayoutFlags="PositionProportional"
-                                              AbsoluteLayout.LayoutBounds="1.40,1,200,100"
-                                              Margin="0,-30,0,0" HorizontalOptions="EndAndExpand"/>
-                        <!--<lottie:AnimationView RepeatMode="Infinite" Animation="night.json" AnimationSource="AssetOrBundle"
+                    <AbsoluteLayout Grid.ColumnSpan="2" Grid.Column="0">
+                        <!--Morning Animation-->
+                            <lottie:AnimationView x:Name="morningAnimation" RepeatMode="Infinite" Animation="sun.json"
+                                                  AnimationSource="AssetOrBundle"
+                                                  HeightRequest="200" WidthRequest="200"
+                                                  VerticalOptions="FillAndExpand"
+                                                  IsAnimating="True" AbsoluteLayout.LayoutFlags="PositionProportional"
+                                                  AbsoluteLayout.LayoutBounds="1.40,-3,200,200"
+                                                  Margin="0"
+                                                  AutoPlay="True" HorizontalOptions="EndAndExpand" />
+                            <!--Normal Animation-->
+                            <lottie:AnimationView x:Name="normalAnimation" RepeatMode="Infinite" Animation="normal.json"
+                                                  AnimationSource="AssetOrBundle"
+                                                  HeightRequest="200" WidthRequest="200"
+                                                  VerticalOptions="FillAndExpand"
+                                                  IsAnimating="True" AbsoluteLayout.LayoutFlags="PositionProportional"
+                                                  AbsoluteLayout.LayoutBounds="1.40,-3,200,200"
+                                                  AutoPlay="True" HorizontalOptions="EndAndExpand" />
+                            <!--Evening Animation-->
+                            <lottie:AnimationView x:Name="eveningAnimation" RepeatMode="Infinite" Animation="sun.json"
+                                                  AnimationSource="AssetOrBundle"
+                                                  HeightRequest="200" WidthRequest="200"
+                                                  VerticalOptions="FillAndExpand"
+                                                  IsAnimating="True" AbsoluteLayout.LayoutFlags="PositionProportional"
+                                                  AbsoluteLayout.LayoutBounds="1.40,-3,200,200"
+                                                  AutoPlay="True" HorizontalOptions="EndAndExpand" />
+                            <!--<lottie:AnimationView RepeatMode="Infinite" Animation="night.json" AnimationSource="AssetOrBundle"
                                               HeightRequest="200" WidthRequest="200" VerticalOptions="FillAndExpand"
                                               IsAnimating="True"
                                               AutoPlay="True" AbsoluteLayout.LayoutFlags="PositionProportional"
                                               AbsoluteLayout.LayoutBounds="1.40,1,200,100"
                                               Margin="0,-30,0,0" HorizontalOptions="EndAndExpand"/>-->
-                        <StackLayout HorizontalOptions="StartAndExpand">
+                        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
                             <Label Text="Good morning, Greg" FontAttributes="Bold" FontSize="Small"
                                    VerticalOptions="CenterAndExpand" TextColor="{StaticResource TextBlack}"
                                    HorizontalOptions="StartAndExpand" />
@@ -38,8 +57,6 @@
                                    VerticalOptions="Start"
                                    HorizontalOptions="StartAndExpand" />
                         </StackLayout>
-
-                        
                     </AbsoluteLayout>
 
                     <Frame Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0,0,10"

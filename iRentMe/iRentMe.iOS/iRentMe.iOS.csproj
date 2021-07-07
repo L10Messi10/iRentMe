@@ -71,6 +71,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <BundleResource Include="sun.json" />
     <BundleResource Include="night.json" />
+    <BundleResource Include="normal.json" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
@@ -136,7 +137,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Azure.Storage.Blobs">
-      <Version>12.8.1</Version>
+      <Version>12.9.1</Version>
     </PackageReference>
     <PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie">
       <Version>4.0.10</Version>

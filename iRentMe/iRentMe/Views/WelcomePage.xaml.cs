@@ -16,19 +16,28 @@ namespace iRentMe.Views
         {
             InitializeComponent();
 
-            DateTime timeOfDayGreeting = DateTime.Now;
+            var timeOfDayGreeting = DateTime.Now;
 
             if (timeOfDayGreeting.Hour >= 5 && timeOfDayGreeting.Hour < 12)
             {
-                Console.WriteLine("Good morning!");
+                //Console.WriteLine("Good morning!");
+                morningAnimation.IsVisible = true;
+                normalAnimation.IsVisible = false;
+                eveningAnimation.IsVisible = false;
             }
             else if (timeOfDayGreeting.Hour >= 12 && timeOfDayGreeting.Hour < 16)
             {
-                Console.WriteLine("Good afternoon!");
+                //Console.WriteLine("Good afternoon!");
+                morningAnimation.IsVisible = false;
+                normalAnimation.IsVisible = true;
+                eveningAnimation.IsVisible = false;
             }
             else
             {
-                Console.WriteLine("Good night!");
+                morningAnimation.IsVisible = false;
+                normalAnimation.IsVisible = false;
+                eveningAnimation.IsVisible = true;
+                //Console.WriteLine("Good night!");
             }
 
             //Console.ReadKey();
