@@ -18,14 +18,14 @@ namespace iRentMe.Views
 
             var timeOfDayGreeting = DateTime.Now;
 
-            if (timeOfDayGreeting.Hour >= 5 && timeOfDayGreeting.Hour < 12)
+            if (timeOfDayGreeting.Hour >= 4 && timeOfDayGreeting.Hour < 12)
             {
                 //Console.WriteLine("Good morning!");
                 morningAnimation.IsVisible = true;
                 normalAnimation.IsVisible = false;
                 eveningAnimation.IsVisible = false;
             }
-            else if (timeOfDayGreeting.Hour >= 12 && timeOfDayGreeting.Hour < 16)
+            else if (timeOfDayGreeting.Hour >= 12 && timeOfDayGreeting.Hour < 17)
             {
                 //Console.WriteLine("Good afternoon!");
                 morningAnimation.IsVisible = false;

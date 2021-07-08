@@ -3,12 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:forms="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              xmlns:touch="clr-namespace:TouchEffect;assembly=TouchEffect"
+
              xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms" 
              x:Class="iRentMe.Views.WelcomePage">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout VerticalOptions="StartAndExpand" Orientation="Vertical" >
-                <Grid VerticalOptions="StartAndExpand" Padding="30">
+                <Grid VerticalOptions="StartAndExpand" Padding="20" RowSpacing="0">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
@@ -17,38 +18,7 @@
                         <ColumnDefinition />
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
-                    <AbsoluteLayout Grid.ColumnSpan="2" Grid.Column="0">
-                        <!--Morning Animation-->
-                            <lottie:AnimationView x:Name="morningAnimation" RepeatMode="Infinite" Animation="sun.json"
-                                                  AnimationSource="AssetOrBundle"
-                                                  HeightRequest="200" WidthRequest="200"
-                                                  VerticalOptions="FillAndExpand"
-                                                  IsAnimating="True" AbsoluteLayout.LayoutFlags="PositionProportional"
-                                                  AbsoluteLayout.LayoutBounds="1.40,-3,200,200"
-                                                  Margin="0"
-                                                  AutoPlay="True" HorizontalOptions="EndAndExpand" />
-                            <!--Normal Animation-->
-                            <lottie:AnimationView x:Name="normalAnimation" RepeatMode="Infinite" Animation="normal.json"
-                                                  AnimationSource="AssetOrBundle"
-                                                  HeightRequest="200" WidthRequest="200"
-                                                  VerticalOptions="FillAndExpand"
-                                                  IsAnimating="True" AbsoluteLayout.LayoutFlags="PositionProportional"
-                                                  AbsoluteLayout.LayoutBounds="1.40,-3,200,200"
-                                                  AutoPlay="True" HorizontalOptions="EndAndExpand" />
-                            <!--Evening Animation-->
-                            <lottie:AnimationView x:Name="eveningAnimation" RepeatMode="Infinite" Animation="sun.json"
-                                                  AnimationSource="AssetOrBundle"
-                                                  HeightRequest="200" WidthRequest="200"
-                                                  VerticalOptions="FillAndExpand"
-                                                  IsAnimating="True" AbsoluteLayout.LayoutFlags="PositionProportional"
-                                                  AbsoluteLayout.LayoutBounds="1.40,-3,200,200"
-                                                  AutoPlay="True" HorizontalOptions="EndAndExpand" />
-                            <!--<lottie:AnimationView RepeatMode="Infinite" Animation="night.json" AnimationSource="AssetOrBundle"
-                                              HeightRequest="200" WidthRequest="200" VerticalOptions="FillAndExpand"
-                                              IsAnimating="True"
-                                              AutoPlay="True" AbsoluteLayout.LayoutFlags="PositionProportional"
-                                              AbsoluteLayout.LayoutBounds="1.40,1,200,100"
-                                              Margin="0,-30,0,0" HorizontalOptions="EndAndExpand"/>-->
+                    <StackLayout Grid.ColumnSpan="2" Grid.Column="0" Orientation="Horizontal" VerticalOptions="Start">
                         <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
                             <Label Text="Good morning, Greg" FontAttributes="Bold" FontSize="Small"
                                    VerticalOptions="CenterAndExpand" TextColor="{StaticResource TextBlack}"
@@ -57,9 +27,42 @@
                                    VerticalOptions="Start"
                                    HorizontalOptions="StartAndExpand" />
                         </StackLayout>
-                    </AbsoluteLayout>
+                        <!--Animation-->
+                        <StackLayout>
+                            <!--Morning Animation-->
+                            <lottie:AnimationView x:Name="morningAnimation" RepeatMode="Infinite" Animation="sun.json"
+                                                  AnimationSource="AssetOrBundle"
+                                                  HeightRequest="200" WidthRequest="200"
+                                                  VerticalOptions="FillAndExpand"
+                                                  IsAnimating="True" Margin="0,0,0,0"
+                                                  AutoPlay="True" HorizontalOptions="EndAndExpand" />
+                            <!--Normal Animation-->
+                            <lottie:AnimationView x:Name="normalAnimation" RepeatMode="Infinite" Animation="normal.json"
+                                                  AnimationSource="AssetOrBundle"
+                                                  HeightRequest="200" WidthRequest="200"
+                                                  VerticalOptions="FillAndExpand"
+                                                  IsAnimating="True"
+                                                  Margin="0,0,0,0"
+                                                  AutoPlay="True" HorizontalOptions="EndAndExpand" />
+                            <!--Evening Animation-->
+                            <lottie:AnimationView x:Name="eveningAnimation" RepeatMode="Infinite" Animation="night.json"
+                                                  AnimationSource="AssetOrBundle"
+                                                  HeightRequest="200" WidthRequest="200"
+                                                  VerticalOptions="FillAndExpand"
+                                                  IsAnimating="True"
+                                                  Margin="0,0,0,0"
+                                                  AutoPlay="True" HorizontalOptions="EndAndExpand" />
+                            <!--<lottie:AnimationView RepeatMode="Infinite" Animation="night.json" AnimationSource="AssetOrBundle"
+                                              HeightRequest="200" WidthRequest="200" VerticalOptions="FillAndExpand"
+                                              IsAnimating="True"
+                                              AutoPlay="True" AbsoluteLayout.LayoutFlags="PositionProportional"
+                                              AbsoluteLayout.LayoutBounds="1.40,1,200,100"
+                                              Margin="0,-30,0,0" HorizontalOptions="EndAndExpand"/>-->
+                        </StackLayout>
+                       
+                    </StackLayout>
 
-                    <Frame Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0,0,10"
+                    <Frame Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="0"
                            Padding="5" CornerRadius="5" HasShadow="True"
                            touch:TouchEff.PressedBackgroundColor="{StaticResource Shadow}"
                            touch:TouchEff.PressedAnimationDuration="50"
